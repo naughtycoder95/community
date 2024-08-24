@@ -1,0 +1,84 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.springframework.boot' version '3.1.11'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'org.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // 웹소켓 의존성 주입
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+    // 레디스 의존성 주입
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    // JavaMailSender 의존성 주입
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+
+    implementation 'org.hibernate.validator:hibernate-validator:6.2.0.Final'
+
+    // sql 출력 결과를 보기위한 라이브러리 추가x
+    implementation 'org.bgee.log4jdbc-log4j2:log4jdbc-log4j2-jdbc4.1:1.16'
+
+    // 오라클 driver (과거: 11버전) -> 19버전용 라이브러리 추가 설치
+    // 오라클 추가 라이브러리( 19c )
+    implementation 'com.oracle.database.jdbc:ucp:19.14.0.0'
+    implementation 'com.oracle.database.security:oraclepki:19.14.0.0'
+    implementation 'com.oracle.database.security:osdt_cert:19.14.0.0'
+    implementation 'com.oracle.database.security:osdt_core:19.14.0.0'
+
+    // apache kafka : 메세징 서버 (MSA에서 필수)
+    implementation 'org.springframework.kafka:spring-kafka'
+
+    // model mapper : entity <-> dto 변환 라이브러리
+    implementation 'org.modelmapper:modelmapper:2.4.2'
+
+    // jwt 토큰(웹토큰) 설정 라이브러리
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+
+    // SSE 의존성 주입 - 김태완
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+
+    // 유효성 체크 라이브러리
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+    annotationProcessor 'org.projectlombok:lombok'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('bootBuildImage') {
+    builder = 'paketobuildpacks/builder-jammy-base:latest'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
