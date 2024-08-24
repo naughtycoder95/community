@@ -1,0 +1,119 @@
+/* 전체 컨테이너 */
+.board-detail-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* 게시글 수정/삭제 버튼 */
+.board-button .btn {
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+/* 게시판 헤더 */
+.card-header {
+    background-color: #b3000f;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* 글 제목 */
+.card-title {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* 게시판 작성자 부분 */
+.card-text-name {
+    font-size: 0.8em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* 게시판 작성일 부분 */
+.card-text-date {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+/* 댓글 목록 */
+.reply-content .list-group-item {
+    padding: 20px 30px;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* 댓글 작성자 */
+.reply-name {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* 댓글 내용 */
+.reply-content {
+    margin-bottom: 10px;
+}
+
+/* 댓글 작성일 */
+.reply-date {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+/* 대댓글 */
+.reReply-container {
+    padding: 20px 30px;
+    background-color: rgb(218, 218, 218);
+}
+
+/* 모달창 */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* 모달 헤더 */
+.modal-header {
+    background-color: #b3000f;
+    color: white;
+}
+
+/* 파일 업로드 버튼 */
+.file-upload-button {
+    width: 100px;
+    display: inline-block;
+}
+
+.btn-danger {
+    background-color: #b3000f;
+    border-color: #b3000f;
+}
+
+/* 투표 */
+.form-check-vote {
+    border-bottom: 1px #a3a3a3 solid;
+    padding: 15px 15px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.input-vote {
+    margin-right: 10px;
+}
+
+.vote-label {
+    margin-left: 0.5rem;
+    font-weight: bold;
+}
+
+.vote-count {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-left: auto;
+}
+
+.highlight {
+    background-color: #e1e1e1;
+    font-weight: bold;
+    border: 2px solid #b3000f;
+}

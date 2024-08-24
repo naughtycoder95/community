@@ -1,0 +1,369 @@
+/* 전역 폰트 설정 */
+body, html {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 헤더 스타일 */
+.header {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 20px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+.header-center .search-input {
+  padding: 5px;
+  font-size: 14px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.header-center .search-button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header-left h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+}
+
+.header-right a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #b3000f;
+}
+
+.header-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 50px;
+}
+
+.header-nav ul li {
+  display: inline;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+}
+.search-box {
+  position: relative;
+}
+
+.search-box input[type="text"] {
+  padding: 10px;
+  width: 400px;
+  border: 2px solid #b3000f;
+  border-radius: 25px;
+  outline: none;
+}
+
+.search-box button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #b3000f;
+  font-size: px;
+  cursor: pointer;
+}
+
+/* TODO: footer */
+#footer_box {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+footer {
+  background-color: #f9f9f9;
+  height: 180px;
+  margin-top: 100px !important; 
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px 0px 100px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  border-top: 1px solid rgb(208, 208, 208);
+}
+
+#footer_logo {
+  font-size: 30px;
+  float: left;
+  font-family: "Playwrite NZ", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#address {
+  font-size: 14px;
+  text-align: right;
+  list-style: none;
+  float: right;
+}
+
+/* 메인페이지 게시판 */
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.board-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.board-section {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+  min-height: 650px;
+}
+
+.board-section h2 {
+  margin-bottom: 10px;
+  border-bottom: 2px solid #f4f4f4;
+  color: #333;
+  font-size: 20px;
+}
+
+.board-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.board-item .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.board-item .good {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.board-item .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.board-item .sub-info {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.board-item .nickname,
+.board-item .reply_count,
+.board-item .add_date {
+  font-size: 14px;
+  color: #666;
+}
+
+.board-item .add_date {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+
+.hot-topics-section {
+  flex: 1 1 100%;
+  max-width: 1400px;
+  margin-bottom: 30px;
+  min-height: 500px;
+  margin-top: 80px;
+}
+
+.hot-topics-section h2 {
+  font-size: 24px;
+}
+
+.hot-topic-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-icon {
+  position: relative;
+  font-size: 24px; /* 아이콘 크기 설정 */
+  cursor: pointer;
+}
+
+.notification-count {
+  position: absolute;
+  top: -4px; /* 뱃지 위치 조정 */
+  right: -4px; /* 뱃지 위치 조정 */
+  background-color: red; /* 배경색 */
+  color: white; /* 글자색 */
+  border-radius: 50%; /* 원형 뱃지 */
+  padding: 2px 6px; /* 내부 패딩 */
+  font-size: 14px; /* 글자 크기 */
+  min-width: 20px; /* 최소 너비 */
+  height: 20px; /* 높이 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 3px #000; /* 그림자 효과 */
+}
+
+.notifications-popup {
+  position: absolute;
+  width: 300px;
+  right: 210px;
+  top: 60px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.notification-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 세로축 정렬 */
+}
+
+.mark-all-read {
+  background-color: rgb(0, 0, 0); /* 초록색 배경 */
+  color: white;
+  padding: 2px 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  align-self: flex-end; /* 오른쪽 상단으로 위치 조정 */
+}
+
+.notification-item {
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.9); /* 항목별 배경색 추가 및 투명도 설정 */
+  border-radius: 3px; /* 경계 둥글게 */
+  display: flex;
+  flex-direction: column;
+}
+
+.notification-item p {
+  margin: 0;
+  color: #333; /* 글자색 변경 */
+  font-size: 14px;
+}
+
+.notification-item .notification-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.notification-item small {
+  color: #666; /* 날짜 글자색 변경 */
+  font-size: 12px;
+}
+
+.notification-item button {
+  padding: 2px 6px;
+  border: none;
+  background-color: #ffffff;  /* 빨간색 배경 */
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  border-radius: 50%;  /* 원형 버튼 */
+  font-size: 20px;
+}
+
+/* RouterLink 커스텀 스타일 */
+.custom-logo {
+  color: black; /* 기본 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-family: "Playwrite NZ", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* RouterLink 커스텀 스타일 */
+.custom-link {
+  color: black; /* 기본 텍스트 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+}
