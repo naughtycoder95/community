@@ -1,4 +1,4 @@
-# Backend_TeamProject_2
+# coummunity
 Spring boot와 Vue.js를 활용한 사내 커뮤니티 게시판 프로젝트입니다.
 
 <br>
